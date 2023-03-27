@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Layout } from 'antd';
-
 import AppRouter from './components/AppRouter';
 import Header from './components/Header/Header';
 
@@ -10,7 +8,7 @@ import './App.scss';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Header />
       <AppRouter />
     </div>
