@@ -1,0 +1,52 @@
+@import '../../styles/colors.scss';
+
+.genres {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 168px;
+  border-top: 10px solid $gray-3;
+  background-color: $gray-2;
+
+
+  .genres-menu {
+    text-transform: uppercase;
+    color: $white;
+    background: none;
+
+    .ant-tabs-tab {
+      color: #363636 !important;
+    }
+  
+    .ant-menu-item-selected,
+    .ant-menu-item-active {
+      color: $white !important;
+  
+      &::after {
+        border-bottom-color: $pink !important;
+      }
+    }
+  }
+
+
+  .genres-sort__title {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: $white;
+  }
+
+  .genres-sort__menu {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: $white;
+
+    &:hover {
+      color: $pink;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import '../../styles/colors.scss';
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+
+  .header-logo {
+    font-size: 20px;
+    color: $pink;
+    & span {
+      font-weight: 900;
+    }
+  }
+
+  .header-button {
+    width: 177px;
+    height: 46px;
+    border-radius: 4px;
+    border-color: $gray;
+    background-color: $gray;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $pink;
+
+    &:hover {
+      border-color: $pink;
+      background-color: $pink;
+      color: $white;
+    }
+  }
+}

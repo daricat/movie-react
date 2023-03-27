@@ -1,0 +1,15 @@
+@import '../../styles/colors.scss';
+
+.Main {
+  padding: 35px 124px;
+  background: none;
+
+  .main__title {
+    margin-bottom: 38px;
+    font-size: 40px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $white;
+  }
+}

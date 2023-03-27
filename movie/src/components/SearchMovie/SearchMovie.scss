@@ -1,0 +1,40 @@
+@import '../../styles/colors.scss';
+
+.search-movie-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 57px;
+
+  &__input {
+    width: 713px;
+    margin-right: 14px;
+    border-radius: 4px;
+    border-color: $gray-1;
+    background-color: $gray-1;
+    font-size: 20px;
+    color: $white;
+
+    &:focus, &:hover {
+      border-color: $pink;
+    }
+  }
+
+  &__submit {
+    height: 100%;
+    width: 233px;
+    border-radius: 4px;
+    border-color: $pink;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $pink;
+
+    &:hover {
+      border-color: $white;
+      background-color: $white;
+      color: $pink;
+    }
+  }
+}
