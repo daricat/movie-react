@@ -7,10 +7,7 @@
     "react-app",
     "react-app/jest"
   ],
-  "plugins": [
-    "prettier",
-    "@typescript-eslint"
-  ],
+  "plugins": ["prettier", "@typescript-eslint"],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -19,25 +16,21 @@
         "jsxSingleQuote": true
       }
     ],
-    "import/extensions": [
-      0
-    ],
+    "import/extensions": [0],
     "react/jsx-filename-extension": [
       2,
       {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     ],
     "@typescript-eslint/no-shadow": "off",
     "no-shadow": "off",
     "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
-    "import/no-extraneous-dependencies": ["error", {"includeInternal": true, "includeTypes": true}]
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "includeInternal": true, "includeTypes": true }
+    ]
   },
   "env": {
     "browser": true,
@@ -47,12 +40,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   }
