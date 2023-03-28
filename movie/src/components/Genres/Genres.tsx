@@ -4,48 +4,37 @@ import { CaretDownOutlined } from '@ant-design/icons';
 
 import './Genres.scss';
 
-const menuGenres: MenuProps['items'] = [
-  {
-    label: 'All',
-    key: 'all'
-  },
-  {
-    label: 'Documentary',
-    key: 'documentary'
-  },
-  {
-    label: 'Comedy',
-    key: 'comedy'
-  },
-  {
-    label: 'Horror',
-    key: 'horror'
-  }
-];
+import IGenresProps from './Genres.interface';
+import transformGenresForMenu from './Genres.utils';
 
-function Genres() {
-  const [current, setCurrent] = useState('all');
+import defaultGenres from './Genres.const';
+
+function Genres({ genres = defaultGenres }: IGenresProps) {
+  const genresForMenu = transformGenresForMenu(genres)!;
+  const firstGenre = genresForMenu[0]!.key as string;
+
+  const [currentGenre, setCurrent] = useState(firstGenre);
 
   const onClick: MenuProps['onClick'] = (e) => {
     setCurrent(e.key);
   };
 
   return (
-    <div className="genres">
+    <div className='genres'>
       <Menu
-        className="genres-menu"
+        className='genres-menu'
         onClick={onClick}
-        selectedKeys={[current]}
-        mode="horizontal"
-        items={menuGenres}
+        selectedKeys={[currentGenre]}
+        mode='horizontal'
+        items={genresForMenu}
       />
 
-      <div className="genres-sort">
-        <span className="genres-sort__title">sort by</span>
+      <div className='genres-sort'>
+        <span className='genres-sort__title'>sort by</span>
 
         <Button
-          className="genres-sort__menu"
-          type="text"
+          className='genres-sort__menu'
+          type='text'
           icon={<CaretDownOutlined />}
         >
           release date

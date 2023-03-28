@@ -6,12 +6,12 @@ import './Header.scss';
 
 function Header() {
   return (
-    <Layout.Header className="Header">
-      <a className="header-logo" href="/">
+    <Layout.Header className='Header'>
+      <a className='header-logo' href='/'>
         <span>netflix</span>roulette
       </a>
 
-      <Button className="header-button" icon={<PlusOutlined />}>
+      <Button className='header-button' icon={<PlusOutlined />}>
         add movie
       </Button>
     </Layout.Header>
