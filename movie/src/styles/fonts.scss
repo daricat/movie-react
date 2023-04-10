@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Montserrat-normal';
+  src: url('../assets/fonts/Montserrat/Montserrat/Montserrat-VariableFont_wght.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-italic';
+  src: url('../assets/fonts/Montserrat/Montserrat/Montserrat-Italic-VariableFont_wght.ttf');
+  font-style: italic;
+}
+
+@mixin fontConfig($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+@mixin montserratLight ($size, $color) {
+  font-family: 'Montserrat-normal', sans-serif;
+  font-weight: 300;
+
+  @include fontConfig($size, $color);
+}
+
+
+@mixin montserratRegular ($size, $color) {
+  font-family: 'Montserrat-normal', sans-serif;
+  font-weight: 400;
+
+  @include fontConfig($size, $color);
+}
+
+@mixin montserratMedium ($size, $color) {
+  font-family: 'Montserrat-normal', sans-serif;
+  font-weight: 500;
+
+  @include fontConfig($size, $color);
+}
+
+@mixin montserratSemiBold ($size, $color) {
+  font-family: 'Montserrat-normal', sans-serif;
+  font-weight: 600;
+
+  @include fontConfig($size, $color);
+}
+
+@mixin montserratBold ($size, $color) {
+  font-family: 'Montserrat-normal', sans-serif;
+  font-weight: 700;
+
+  @include fontConfig($size, $color);
+}
+
+@mixin montserratNormalBlack ($size, $color) {
+  font-family: 'Montserrat-normal', sans-serif;
+  font-weight: 900;
+
+  @include fontConfig($size, $color);
+}

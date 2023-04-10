@@ -1,0 +1,46 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+@import '../../styles/animation.scss';
+
+.ContextMenu {
+  position: relative;
+
+  &-item {
+    &__selected {
+      @include defaultAnimation;
+      @include montserratSemiBold(16px, $white);
+
+      text-transform: uppercase;
+      cursor: pointer;
+
+      & span {
+        color: $pink;
+      }
+
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+
+  &-items {
+    @include defaultAnimation;
+    
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-width: 180px;
+    border: 1px solid $pink;
+    border-radius: 4px;
+    background-color: $gray-2;
+    
+
+    &__close {
+      display: none;
+    }
+
+    &__open {
+      display: block;
+    }
+  }
+}

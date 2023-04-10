@@ -1,40 +1,15 @@
 @import '../../styles/colors.scss';
 
-.search-movie-form {
+.SearchMovie {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   height: 57px;
+  max-width: 960px;
+  margin: 0 auto;
 
-  &__input {
-    width: 713px;
-    margin-right: 14px;
-    border-radius: 4px;
-    border-color: $gray-1;
-    background-color: $gray-1;
-    font-size: 20px;
-    color: $white;
-
-    &:focus, &:hover {
-      border-color: $pink;
-    }
-  }
-
-  &__submit {
-    height: 100%;
+  & .Button {
+    margin-left: 14px;
     width: 233px;
-    border-radius: 4px;
-    border-color: $pink;
-    font-size: 20px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: $white;
-    background-color: $pink;
-
-    &:hover {
-      border-color: $white;
-      background-color: $white;
-      color: $pink;
-    }
   }
 }

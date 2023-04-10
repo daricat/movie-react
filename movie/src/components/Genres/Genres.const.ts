@@ -1,3 +1,22 @@
-const defaultGenres: string[] = ['All', 'Documentary', 'Comedy', 'Horror'];
+import { TGenre } from './Genres.type';
 
-export default defaultGenres;
+const DEFAULT_GENRES: TGenre[] = [
+  {
+    title: 'All',
+    id: 'all'
+  },
+  {
+    title: 'Documentary',
+    id: 'documentary'
+  },
+  {
+    title: 'Comedy',
+    id: 'comedy'
+  },
+  {
+    title: 'Horror',
+    id: 'horror'
+  }
+];
+
+export default DEFAULT_GENRES;

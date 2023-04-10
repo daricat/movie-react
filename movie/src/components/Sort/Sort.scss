@@ -1,0 +1,14 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+.Sort {
+  display: flex;
+  flex-direction: row;
+
+  &-title {
+    @include montserratRegular(16px, $white);
+
+    margin-right: 30px;
+    text-transform: uppercase;
+  }
+}

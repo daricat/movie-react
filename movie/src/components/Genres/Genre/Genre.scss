@@ -1,0 +1,42 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/fonts.scss';
+@import '../../../styles/animation.scss';
+
+.Genre {
+  @include montserratMedium(16px, $white);
+  @include defaultAnimation;
+
+  position: relative;
+  margin-right: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &::before {
+    @include defaultAnimation;
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: 36px;
+    width: 100%;
+    height: 4px;
+    background-color: $transparent-2;
+  }
+
+  &:hover {
+    color: $pink;
+
+    &::before {
+      background-color: $pink;
+    }
+  }
+
+  &__selected {
+    color: $pink;
+  }
+
+  &__selected::before {
+    background-color: $pink;
+  }
+
+}

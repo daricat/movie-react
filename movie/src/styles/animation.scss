@@ -1,0 +1,3 @@
+@mixin defaultAnimation() {
+  transition: all .2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}

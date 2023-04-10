@@ -1,0 +1,19 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/fonts.scss';
+@import '../../../styles/animation.scss';
+
+.ContextMenuItem {
+  @include montserratLight(16px, $white);
+  @include defaultAnimation;
+
+  padding: 10px 5px;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &:hover {
+    @include montserratMedium(16px, $white);
+
+    background-color: $pink;
+  }
+  
+}

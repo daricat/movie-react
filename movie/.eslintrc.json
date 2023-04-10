@@ -5,9 +5,13 @@
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "react-app",
-    "react-app/jest"
+    "react-app/jest",
+    "plugin:storybook/recommended"
   ],
-  "plugins": ["prettier", "@typescript-eslint"],
+  "plugins": [
+    "prettier",
+    "@typescript-eslint"
+  ],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -16,11 +20,18 @@
         "jsxSingleQuote": true
       }
     ],
-    "import/extensions": [0],
+    "import/extensions": [
+      0
+    ],
     "react/jsx-filename-extension": [
       2,
       {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     ],
     "@typescript-eslint/no-shadow": "off",
@@ -29,8 +40,15 @@
     "@typescript-eslint/no-non-null-assertion": "off",
     "import/no-extraneous-dependencies": [
       "error",
-      { "includeInternal": true, "includeTypes": true }
-    ]
+      {
+        "includeInternal": true,
+        "includeTypes": true
+      }
+    ],
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "import/prefer-default-export": "off"
   },
   "env": {
     "browser": true,
@@ -40,7 +58,12 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     }
   }
