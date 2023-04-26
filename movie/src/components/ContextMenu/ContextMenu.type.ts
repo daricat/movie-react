@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 
 export type TContextMenuItem = {
   title: string;
-  action: string;
+  link: string;
 };
 
 export type TContextMenuProps = {

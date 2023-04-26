@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 import { TContextMenuProps } from './ContextMenu.type';
 
 import EMenuVisibility from './ContextMenu.enum';
-import MenuItem from './ContextMenuItem/ContextMenuItem';
+import ContextMenuItem from './ContextMenuItem/ContextMenuItem';
 
 import './ContextMenu.scss';
 import useClickOutside from '../../hooks/useClickOutside.hook';
@@ -46,8 +46,13 @@ function ContextMenu({
       </span>
 
       <ul className={menuClassName} onClick={changeMenuVisibility}>
-        {items.map(({ title, action }) => (
-          <MenuItem onSelect={onSelect} title={title} key={title} />
+        {items.map(({ title, link }) => (
+          <ContextMenuItem
+            onSelect={onSelect}
+            title={title}
+            link={link}
+            key={title}
+          />
         ))}
       </ul>
     </div>

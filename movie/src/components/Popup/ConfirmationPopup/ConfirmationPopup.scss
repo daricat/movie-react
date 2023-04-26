@@ -1,0 +1,29 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/fonts.scss';
+
+.Dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-top: 25px;
+  background-color: $gray-2;
+
+  &-title {
+    @include montserratLight(40px, $white);
+
+    margin-bottom: 37px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &-message {
+    @include montserratRegular(20px, $white);
+
+    margin-bottom: 52px;
+  }
+
+  & > .Button {
+    align-self: flex-end;
+    padding: 17px 38px;
+  }
+}

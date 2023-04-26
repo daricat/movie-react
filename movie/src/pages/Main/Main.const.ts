@@ -3,11 +3,11 @@ export const MAIN_TITLE = 'find your movie';
 export const SORT_MENU_DATA = [
   {
     title: 'release date',
-    action: 'sort'
+    link: 'sort'
   },
   {
     title: 'title',
-    action: 'sort'
+    link: 'sort'
   }
 ];
 
