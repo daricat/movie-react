@@ -1,0 +1,21 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+.MovieList {
+  &-title {
+    @include montserratRegular(20px, $white);
+
+    padding: 24px 0;
+
+    span {
+      @include montserratSemiBold(20px, $white);
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

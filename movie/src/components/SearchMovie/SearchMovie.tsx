@@ -1,5 +1,5 @@
-import { Input, Button } from 'antd';
 import React, { useCallback, useState } from 'react';
+
 import { ISearchMovieProps } from './SearchMovie.interface';
 
 import './SearchMovie.scss';
@@ -8,6 +8,7 @@ import {
   PLACEHOLDER_SEARCH_INPUT,
   DEFAULT_SEARCH_QUERY
 } from './SearchMovie.const';
+import Button from '../Button/Button';
 
 function SearchMovie({
   initialSearchQuery = DEFAULT_SEARCH_QUERY,
@@ -28,20 +29,9 @@ function SearchMovie({
   );
 
   return (
-    <form className='search-movie-form' onSubmit={handleSubmit}>
-      <Input
-        className='search-movie-form__input'
-        placeholder={PLACEHOLDER_SEARCH_INPUT}
-        value={searchTerm}
-        onChange={handleChange}
-      />
-      <Button
-        className='search-movie-form__submit'
-        type='primary'
-        htmlType='submit'
-      >
-        Search
-      </Button>
+    <form className='SearchMovie' onSubmit={handleSubmit}>
+      <input type='text' className='Input default' />
+      <Button type='submit' label='search' />
     </form>
   );
 }

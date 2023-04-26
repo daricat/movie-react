@@ -1,46 +1,33 @@
-import { Button, Menu, MenuProps } from 'antd';
 import React, { useState } from 'react';
-import { CaretDownOutlined } from '@ant-design/icons';
 
 import './Genres.scss';
 
-import IGenresProps from './Genres.interface';
-import transformGenresForMenu from './Genres.utils';
+import { TGenresProps } from './Genres.type';
 
-import defaultGenres from './Genres.const';
+import DEFAULT_GENRES from './Genres.const';
 
-function Genres({ genres = defaultGenres }: IGenresProps) {
-  const genresForMenu = transformGenresForMenu(genres)!;
-  const firstGenre = genresForMenu[0]!.key as string;
+import Genre from './Genre/Genre';
 
-  const [currentGenre, setCurrent] = useState(firstGenre);
+function Genres({ genres = DEFAULT_GENRES }: TGenresProps) {
+  const initialSelectedItem = genres[0].title;
 
-  const onClick: MenuProps['onClick'] = (e) => {
-    setCurrent(e.key);
+  const [selectedItem, setSelectedItem] = useState(initialSelectedItem);
+
+  const onSelect = (selectedItem: string) => {
+    setSelectedItem(selectedItem);
   };
 
   return (
-    <div className='genres'>
-      <Menu
-        className='genres-menu'
-        onClick={onClick}
-        selectedKeys={[currentGenre]}
-        mode='horizontal'
-        items={genresForMenu}
-      />
-
-      <div className='genres-sort'>
-        <span className='genres-sort__title'>sort by</span>
-
-        <Button
-          className='genres-sort__menu'
-          type='text'
-          icon={<CaretDownOutlined />}
-        >
-          release date
-        </Button>
-      </div>
-    </div>
+    <ul className='Genres'>
+      {genres.map(({ title, id }) => (
+        <Genre
+          title={title}
+          onSelect={onSelect}
+          key={id}
+          currentItem={selectedItem}
+        />
+      ))}
+    </ul>
   );
 }
 

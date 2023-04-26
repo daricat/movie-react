@@ -1,0 +1,81 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/fonts.scss';
+@import '../../../styles/animation.scss';
+
+.MovieTile {
+  @include defaultAnimation;
+
+  position: relative;
+  max-width: 322px;
+  margin-bottom: 55px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 0px 5px 3px $pink-2;
+  }
+
+  &-image {
+    height: 455px;
+    margin-bottom: 22px;
+    overflow: hidden;
+
+    & img {
+      width: 322px;
+    }
+  }
+
+  &-details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__title {
+      @include montserratMedium(18px, $white);
+    }
+
+    &__genres {
+      @include montserratMedium(14px, $white);
+
+      width: 100%;
+      margin-top: 8px;
+    }
+  }
+
+  & .ContextMenu {
+    @include defaultAnimation;
+
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid $transparent-2;
+    border-radius: 50%;
+
+    color: $white;
+    background-color: $gray-8;
+
+    &:hover {
+      border: 1px solid $pink;
+    }
+    
+    & .ContextMenu-item__selected {
+      transform: scale(1.3);
+      & span {
+        color: $white;
+      }
+    }
+
+    & .ContextMenu-items {
+      top: 38px;
+    }
+  }
+}

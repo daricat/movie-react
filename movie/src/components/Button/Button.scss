@@ -1,0 +1,56 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+@import '../../styles/animation.scss';
+
+@mixin defaultButton {
+  @include defaultAnimation;
+
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.Button {
+  position: relative;
+
+  &.default {
+    @include defaultButton;
+    @include montserratSemiBold(20px, $white);
+    background-color: $pink;
+
+    &:hover {
+      background-color: $white;
+      color: $pink;
+    }
+  }
+
+  &.smoke {
+    @include defaultButton;
+    @include montserratSemiBold(20px, $pink);
+
+    background-color: $transparent-1;
+
+    &:hover {
+      background-color: $white;
+    }
+  }
+
+  &.transparent {
+    @include defaultButton;
+    @include montserratMedium(14px, $white);
+
+    border: 1px solid $gray-7;
+    background-color: $transparent-2;
+
+    &:hover {
+      border-color: $pink;
+      color: $pink;
+    }
+  }
+
+  &__label {
+    margin-left: 5px;
+  }
+}

@@ -1,20 +1,24 @@
-import React from 'react';
-import { Layout, Button } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
+import React from 'react';
+
+import Button from '../Button/Button';
 
 import './Header.scss';
 
 function Header() {
   return (
-    <Layout.Header className='Header'>
+    <header className='Header'>
       <a className='header-logo' href='/'>
         <span>netflix</span>roulette
       </a>
 
-      <Button className='header-button' icon={<PlusOutlined />}>
-        add movie
-      </Button>
-    </Layout.Header>
+      <Button
+        className='header-button'
+        theme='default'
+        icon={<PlusOutlined />}
+        label='add movie'
+      />
+    </header>
   );
 }
 
